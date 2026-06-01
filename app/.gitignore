@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Databases
+*.db
+*.database
+
+# authentication tokens
+*.jwt
+
+
+
+# Virtual environments
+venv/
+.env
+
+# IDE/editor files
+.vscode/
+.idea/

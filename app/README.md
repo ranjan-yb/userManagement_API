@@ -33,4 +33,4 @@ Visit: http://127.0.0.1:8000/docs
 
 * POST /users → Create user
 * POST /login → Login
-* GET /profile → Protected route
+* PATCH /changePassword -> Change Password

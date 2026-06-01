@@ -2,15 +2,21 @@ from fastapi import FastAPI
 from app.routes import users
 from app.models import user
 from app.database import Base, engine
+from fastapi.middleware.cors import CORSMiddleware
 
-# print("Password type:", type(user.password), "Value:", )
+
 
 app = FastAPI()
 
 user.Base.metadata.create_all(bind=engine)
 app.include_router(users.router)
 
-# @app.get("/")
-# def home():
-#     print("fast api running successfully ")
-#     return "home"
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
+
